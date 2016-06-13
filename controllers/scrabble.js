@@ -9,13 +9,15 @@ var ScrabbleController = {
   },
 
   getScoreForm: function (req, res) {
+    res.render('score', { title: this.scrabbleTitle })
+  },
+
+  postScore: function (req, res) {
     var locals = {}
+    locals.score = req.body.word
+    locals.score = scrabble.score(req.body.word)
 
-    if (req.body.word) {
-      locals.score = scrabble.score(req.body.word)
-    }
-
-    res.render('scoreform', { title: this.scrabbleTitle })
+    res.render('score', { title: this.scrabbleTitle })
   }
 }
 

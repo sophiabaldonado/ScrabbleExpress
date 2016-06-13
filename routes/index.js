@@ -6,5 +6,6 @@ var Controller = require('../controllers/scrabble.js')
 router.get('/', Controller.getIndex)
 
 router.get('/score', Controller.getScoreForm)
+router.post('/score', Controller.postScore)
 
 module.exports = router

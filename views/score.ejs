@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <%= locals %>
+    <p><%= locals.word %></p>
+    <p><%= locals.score %></p>
+    <article class="score-form">
+      <form action="" method="post">
+        <label class="score-label">Scrabble Word: <input class="score-textbox" type="text" name="word" value="" id="word" placeholder="word" required pattern="[A-Za-z]+"></label>
+        <input class="score-button" type="submit" value="SCORE">
+      </form>
+    <article>
+  </body>
+</html>
