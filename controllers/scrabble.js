@@ -14,10 +14,10 @@ var ScrabbleController = {
 
   postScore: function (req, res) {
     var locals = {}
-    locals.score = req.body.word
+    locals.word = req.body.word
     locals.score = scrabble.score(req.body.word)
 
-    res.render('score', { title: this.scrabbleTitle })
+    res.render('score', { title: this.scrabbleTitle, locals: locals })
   }
 }
 
