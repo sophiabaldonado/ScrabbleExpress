@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+var express = require('express')
+var router = express.Router()
+var Controller = require('../controllers/scrabble.js')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', Controller.getIndex)
 
-module.exports = router;
+router.get('/score', Controller.getScoreForm)
+
+module.exports = router
