@@ -1,13 +1,368 @@
-body {
+/*body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
-}
+}*/
 
 .chart {
   padding: 2rem;
   float: left;
 }
+
+/**
+
+  green: #62A59E
+  light green: #66B6AE
+  lighter green: #B8D7D4
+  lightest green: #E0F1F0
+  dark green: #269B8F
+
+**/
+
+/** Main Layout **/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  font-family: 'Alegreya Sans', Arial, sans-serif;
+  color: #808080;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 12rem;
+  background-color: #62A59E;
+  padding-top: 1rem;
+  text-align: center;
+  overflow: auto;
+}
+
+header h1 {
+  margin: .15rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Merriweather', Georgia, serif;
+}
+
+h1 {
+  font-size: 4rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=text], textarea {
+  -webkit-transition: all 0.20s ease-in-out;
+  -moz-transition: all 0.20s ease-in-out;
+  -ms-transition: all 0.20s ease-in-out;
+  -o-transition: all 0.20s ease-in-out;
+  outline: none;
+  width: 35%;
+  transform: scale(2);
+  margin: 1.5rem auto;
+  border: .05rem solid #B8D7D4;
+  border-radius: .15rem;
+  background-color: #F3F3F3;
+}
+
+input[type=text]:focus, textarea:focus {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px rgba(146, 227, 218, 1);
+    border: 1px solid rgba(146, 227, 218, 1);
+}
+
+.top-nav {
+  width: 50%;
+  margin: auto;
+}
+
+.top-nav div {
+  display: inline-block;
+  width: 45%;
+  height: 4rem;
+  margin: .5rem .5rem;
+  padding-top: 1rem;
+  border: .2rem solid #B8D7D4;
+  border-radius: .25rem;
+}
+
+.top-nav div:hover {
+  border-color: white;
+  color: white;
+}
+
+div.current-page {
+  border-color: white;
+  color: white;
+}
+
+.top-nav a {
+  color: #B8D7D4;
+  font-size: 1.4rem;
+}
+
+.accent {
+  color: #B8D7D4;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clear-both {
+  clear: both;
+}
+
+footer {
+  width: 100%;
+  margin-top: 5rem;
+  padding: 1rem;
+  color: #B8D7D4;
+  text-align: center;
+  clear: both;
+}
+
+/** Home Page **/
+
+.home-header {
+  height: 27rem;
+}
+
+
+.home-header h1 {
+  font-size: 5rem;
+  margin: 3rem;
+}
+
+.scrabble-about {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+}
+
+.scrabble-about h2 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  color: #62A59E;
+}
+
+.first-letter {
+  color: #B8D7D4;
+  font-family: 'Merriweather', Georgia;
+  font-size: 1.8rem;
+}
+
+.scrabble-about p {
+  width: 85%;
+  float: left;
+}
+
+.scrabble-about figure {
+  width: 13%;
+  margin: 1rem auto;
+  float: right;
+  text-align: center;
+}
+
+.scrabble-about figure:hover {
+  transform: scale(1.1);
+}
+
+.scrabble-about figcaption {
+  color: #62A59E;
+}
+
+.scrabble-about img {
+  width: 100%;
+}
+
+/** Scoring Pages **/
+
+.score-page * {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.score-page h2 {
+  margin: 2rem auto;
+  color: #62A59E;
+}
+
+.display-scores {
+  width: 50%;
+  margin: 2rem auto;
+  border: .05rem solid #62A59E;
+  overflow: auto;
+}
+
+.score-header {
+  width: 50%;
+  height: 3rem;
+  margin: 0;
+  padding: .2rem;
+  background-color: #62A59E;
+  color: white;
+}
+
+.score-header h3 {
+  margin-top: .8rem;
+}
+
+.display-scores > div {
+  width: 50%;
+  margin: 0;
+}
+
+.display-scores div:nth-child(4n+2),
+.display-scores div:nth-child(4n+3) {
+  background-color: #E0F1F0;
+}
+
+.display-scores p {
+  margin: .5rem auto;
+}
+
+/*.scored-word {
+  border-right: .05rem solid #62A59E;
+}*/
+
+.score-form {
+  width: 50%;
+}
+
+label.score-label {
+    font-size: 1.5rem;
+}
+
+
+.letter-checkbox-label {
+  display: inline-block;
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+}
+
+/** Working on pretty checkbox, argghhh! **/
+
+input[type=checkbox] {
+	opacity: 0;
+  appearance: none;
+}
+
+/*.letter-checkbox {
+  display: inline-block;
+  transform: scale(2);
+  margin: 0 1rem 0 0;
+}*/
+
+.letter-checkbox-label span {
+  cursor: pointer;
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0 .5rem -0.25rem 0;
+  background-color: #B8D7D4;
+  border-radius: .2rem;
+  position: relative;;
+  top: 0;
+  left: 0;
+  transition: all .2s ease;
+}
+
+.letter-checkbox-label span:after {
+	opacity: 0.2;
+	content: '';
+	position: absolute;
+	width: .5rem;
+	height: .25rem;
+	background: transparent;
+	top: .35rem;
+	left: .35rem;
+	border: .2rem solid #333;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
+.letter-checkbox-label span:hover::after {
+	opacity: 0.5;
+}
+
+.letter-checkbox:checked + .letter-checkbox-label span:after {
+	opacity: 1;
+  background-color: #62A59E;
+  color: white;
+}
+
+.letter-checkbox:active + .letter-checkbox-label span:after {
+	opacity: 1;
+  background-color: #62A59E;
+  color: white;
+}
+
+.score-button {
+  width: 20%;
+  height: 2rem;
+  border: none;
+  border-radius: .25rem;
+  background-color: #62A59E;
+  box-shadow: 0 .2rem 0 0 #1E8076;
+  color: white;
+  font-family: 'Merriweather', Georgia;
+  font-size: 1rem;
+}
+
+.score-button:hover {
+  background-color: #66B6AE;
+  cursor: pointer;
+}
+
+.score-button:active {
+  transform: translate(0, .175rem);
+  -webkit-transform: translate(0px, .175rem);
+  box-shadow: 0 -.075rem 0 0 #1E8076;
+  box-shadow: 0 0 0 0 #1E8076;
+  outline: 0;
+}
+
+/** Score Page **/
+
+.score-space {
+  height: 2.2rem;
+}
+
+
+/** Score Many Page **/
+
+.score-many-words .score-many-textbox {
+  text-align: left;
+  margin: 4.5rem auto;
+}
+
+
+
+
+
+
+
+
+/** end **/

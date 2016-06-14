@@ -13,4 +13,6 @@ router.post('/scrabble/score/:word', Controller.postScore)
 
 router.get('/scrabble/chart', Controller.scoreChart)
 
+router.get('/scrabble/score-many', Controller.scoreMany)
+
 module.exports = router

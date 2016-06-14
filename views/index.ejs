@@ -2,10 +2,37 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,100,100italic,300,300italic,400italic,500,700,500italic,700italic,800,800italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header class="home-header">
+      <a href="/"><h1>Scrabble <span class="accent">w/</span><br>Sinatra</h1></a>
+      <nav class="top-nav">
+        <a href="/scrabble/score"><div>Score A Word</div></a>
+        <a href="/scrabble/score-many"><div>Score Multiple</div></a>
+      </nav>
+    </header>
+
+    <article>
+      <section class="scrabble-about">
+        <h2>Scrabble something blah blah.</h2>
+        <p><span class="first-letter">L</span>isticle you probably haven't heard of them mlkshk church-key blue bottle. Offal plaid lomo distillery pinterest, fashion axe humblebrag tattooed brooklyn affogato single-origin coffee small batch pop-up hashtag. Fingerstache blog photo booth vice, fixie keytar jean shorts ennui twee truffaut occupy. Flannel letterpress portland, butcher trust fund knausgaard salvia tattooed man braid ugh austin plaid truffaut. Kogi crucifix brunch lumbersexual. Roof party gentrify pickled ramps squid actually. Bicycle rights mlkshk cronut try-hard hella.
+          <a href="https://github.com/justinewinnie/Scrabble">
+            <figure>
+              <img alt="github logo" src="/images/github.png">
+              <figcaption>Scrabble Repo</figcaption>
+            </figure>
+        </a>
+        </p>
+      </section>
+    </article>
+
+    <footer>
+      &copy; 2016 Sophia Baldonado
+    </footer>
   </body>
 </html>

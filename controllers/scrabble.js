@@ -36,6 +36,10 @@ var ScrabbleController = {
     }
 
     res.render('scorechart', { title: ScrabbleController.scrabbleTitle, locals: locals })
+  },
+
+  scoreMany: function (req, res) {
+    res.render('scoremany', { title: ScrabbleController.scrabbleTitle })
   }
 }
 
