@@ -11,25 +11,30 @@
   <body>
 
     <header>
-      <a href="/"><h1>Scrabble <span class="accent">w/</span>Sinatra</h1></a>
+      <a href="/"><h1>Scrabble <span class="accent">w/</span>Express</h1></a>
       <nav class="top-nav">
         <a href="/scrabble/score"><div>Score A Word</div></a>
-        <a href="/scrabble/score-many"><div class="current-page">Score Multiple</div></a>
+        <a href="/scrabble/chart"><div class="current-page">Score Chart</div></a>
       </nav>
     </header>
     <main>
       <section class="score-page">
 
         <h2>Score Chart</h2>
-        <div class="chart chart-keys">
-          <% for (var key of locals.chart_keys) { %>
-            <p><%= key %></p>
-          <% } %>
-        </div>
-        <div class="chart chart-values">
-          <% for (var val of locals.chart_values) { %>
-            <p><%= val %></p>
-          <% } %>
+
+        <div class="display-scores">
+          <section class="left score-header"><h3>LETTERS</h3></section>
+          <section class="left score-header"><h3>SCORE</h3></section>
+          <div class="score left">
+            <% for (var val of locals.chart_values) { %>
+              <p><%= val %></p>
+            <% } %>
+          </div>
+          <div class="scored-word left">
+            <% for (var key of locals.chart_keys) { %>
+              <p><%= key %></p>
+            <% } %>
+          </div>
         </div>
 
       </section>

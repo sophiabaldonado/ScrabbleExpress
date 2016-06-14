@@ -233,7 +233,9 @@ footer {
 }
 
 .display-scores div:nth-child(4n+2),
-.display-scores div:nth-child(4n+3) {
+.display-scores div:nth-child(4n+3),
+.scores div:nth-child(4n+2),
+.scored-words div:nth-child(4n+3) {
   background-color: #E0F1F0;
 }
 
@@ -241,11 +243,7 @@ footer {
   margin: .5rem auto;
 }
 
-/*.scored-word {
-  border-right: .05rem solid #62A59E;
-}*/
-
-.score-form {
+.score-form, .score-chart {
   width: 50%;
 }
 
@@ -267,12 +265,6 @@ input[type=checkbox] {
 	opacity: 0;
   appearance: none;
 }
-
-/*.letter-checkbox {
-  display: inline-block;
-  transform: scale(2);
-  margin: 0 1rem 0 0;
-}*/
 
 .letter-checkbox-label span {
   cursor: pointer;
