@@ -14,16 +14,19 @@ var ScrabbleController = {
 
   postScore: function (req, res) {
     var locals = {}
-    locals.word = req.body.word
-    locals.score = scrabble.score(req.body.word)
+    if (req.body.word) {
+      var word = req.body.word
+    } else {
+      var word = req.params.word
+    }
+    locals.word = word
+    locals.score = scrabble.score(word)
 
     res.render('score', { title: ScrabbleController.scrabbleTitle, locals: locals })
   },
 
   scoreChart: function (req, res) {
     var locals = {}
-    // var chart_keys = []
-    // var chart_values
     locals.chart_keys = []
     locals.chart_values = []
 
