@@ -6,6 +6,15 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>score chart here</p>
+    <div class="chart chart-keys">
+      <% for (var key of locals.chart_keys) { %>
+        <p><%= key %></p>
+      <% } %>
+    </div>
+    <div class="chart chart-values">
+      <% for (var val of locals.chart_values) { %>
+        <p><%= val %></p>
+      <% } %>
+    </div>
   </body>
 </html>
